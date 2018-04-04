@@ -16,6 +16,8 @@
 		A0A71E831CBC7D74002C5C88 /* SwCrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A71E781CBC7D74002C5C88 /* SwCrypt.framework */; };
 		A0A71E881CBC7D74002C5C88 /* SwCryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A71E871CBC7D74002C5C88 /* SwCryptTests.swift */; };
 		A0A71E931CBC7DB4002C5C88 /* SwCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A71E921CBC7DB4002C5C88 /* SwCrypt.swift */; };
+		E69741C02074D8B8004A20DB /* SwCrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A71E781CBC7D74002C5C88 /* SwCrypt.framework */; };
+		E69741C12074D8B8004A20DB /* SwCrypt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0A71E781CBC7D74002C5C88 /* SwCrypt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,28 @@
 			remoteGlobalIDString = A0A71E771CBC7D74002C5C88;
 			remoteInfo = SwCrypt;
 		};
+		E69741C22074D8B8004A20DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0A71E6F1CBC7D74002C5C88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0A71E771CBC7D74002C5C88;
+			remoteInfo = SwCrypt;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E69741C42074D8B8004A20DB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E69741C12074D8B8004A20DB /* SwCrypt.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A042DCB91CC0800F00271902 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -59,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69741C02074D8B8004A20DB /* SwCrypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,10 +179,12 @@
 				A051E3771DBA5DA3004293E9 /* Sources */,
 				A051E3781DBA5DA3004293E9 /* Frameworks */,
 				A051E3791DBA5DA3004293E9 /* Resources */,
+				E69741C42074D8B8004A20DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E69741C32074D8B8004A20DB /* PBXTargetDependency */,
 			);
 			name = dummyTestApp;
 			productName = dummyTestApp;
@@ -318,6 +344,11 @@
 			isa = PBXTargetDependency;
 			target = A0A71E771CBC7D74002C5C88 /* SwCrypt */;
 			targetProxy = A0A71E841CBC7D74002C5C88 /* PBXContainerItemProxy */;
+		};
+		E69741C32074D8B8004A20DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0A71E771CBC7D74002C5C88 /* SwCrypt */;
+			targetProxy = E69741C22074D8B8004A20DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
